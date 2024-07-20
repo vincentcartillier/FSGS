@@ -63,13 +63,12 @@ class ModelParams(ParamGroup):
         return g
 
 class PipelineParams(ParamGroup):
-    def __init__(self, parser):
+    def __init__(self):
         self.convert_SHs_python = False
         self.compute_cov3D_python = False
         self.debug = False
         self.use_confidence = False
         self.use_color = True
-        super().__init__(parser, "Pipeline Parameters")
 
 class OptimizationParams(ParamGroup):
     def __init__(self, parser):

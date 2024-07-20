@@ -43,10 +43,10 @@ class GaussianModel:
 
         self.rotation_activation = torch.nn.functional.normalize
 
-    def __init__(self, args):
-        self.args = args
-        self.active_sh_degree = 0
-        self.max_sh_degree = args.sh_degree
+    def __init__(self, max_sh_degree=3, active_sh_degree=3):
+        # self.args = args
+        self.active_sh_degree = active_sh_degree
+        self.max_sh_degree = max_sh_degree
         self.init_point = torch.empty(0)
         self._xyz = torch.empty(0)
         self._features_dc = torch.empty(0)
